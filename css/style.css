@@ -542,7 +542,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #47b2e4;
+  color: #6c5454;
   line-height: 1;
 }
 
@@ -635,7 +635,7 @@ section {
 }
 
 .why-us .accordion-list span {
-  color: #47b2e4;
+  color: #6c5454;
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -662,7 +662,7 @@ section {
 }
 
 .why-us .accordion-list a.collapsed:hover {
-  color: #47b2e4;
+  color: #6c5454;
 }
 
 .why-us .accordion-list a.collapsed .icon-show {
@@ -803,7 +803,7 @@ section {
 }
 
 .services .icon-box:hover h4 a {
-  color: #47b2e4;
+  color: #6c5454;
 }
 
 /*--------------------------------------------------------------
