@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #000000;
+  color: #37517e;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #000000;
+  color: #37517e;
 }
 
 @media (max-width: 991px) {
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: #6c5454;
+  background: #47b2e4;
   transition: 0.3s;
   z-index: 999;
 }
@@ -228,23 +228,23 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #000000;
+  color: #37517e;
 }
 
 .navbar-mobile a:hover, .navbar-mobile, .navbar-mobile li:hover > a {
-  color: #6C5454;
+  color: #47b2e4;
 }
 
 .navbar-mobile .getstarted {
   margin: 15px;
-  color: #37517e;
+  color: #fff;
 }
 
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
+  margin: 10px 50px;
+  padding: 0;
   z-index: 99;
   opacity: 1;
   visibility: visible;
@@ -500,6 +500,7 @@ section {
 .about .content ul li {
   padding-left: 28px;
   position: relative;
+  font-size: 15px;
 }
 
 .about .content ul li + li {
@@ -510,7 +511,7 @@ section {
   position: absolute;
   left: 0;
   top: 2px;
-  font-size: 20px;
+  font-size: 18px;
   color: #6c5454;
   line-height: 1;
 }
@@ -1110,4 +1111,92 @@ section {
     text-align: center;
     float: none;
   }
+}
+
+/*--------------------------------------------------------------
+# Integration
+--------------------------------------------------------------*/
+#integration {
+  padding: 60px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+#integration .integration-wrap {
+  border-top: 1px solid #d6eaff;
+  border-left: 1px solid #d6eaff;
+  margin-bottom: 30px;
+}
+
+#integration .integration-logo {
+  padding: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #d6eaff;
+  border-bottom: 1px solid #d6eaff;
+  overflow: hidden;
+  background: #fff;
+  height: 160px;
+}
+
+#integration .integration-logo:hover img {
+  transform: scale(1.2);
+}
+
+#integration img {
+  transition: all 0.4s ease-in-out;
+}
+/* Templates Section
+--------------------------------*/
+#templates {
+  padding: 60px 0 40px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+#templates .box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#templates .box:hover {
+  transform: translateY(-5px);
+}
+
+#templates .icon {
+  position: absolute;
+  left: -10px;
+  top: calc(50% - 32px);
+}
+
+#templates .icon i {
+  font-size: 64px;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+#templates .title {
+  margin-left: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#templates.title a {
+  color: #111;
+}
+
+#templates .box:hover .title a {
+  color: #007bff;
+}
+
+#templates .description {
+  font-size: 14px;
+  margin-left: 40px;
+  line-height: 24px;
+  margin-bottom: 0;
 }
