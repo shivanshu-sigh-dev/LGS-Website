@@ -29,6 +29,7 @@
 
 <!--For Carousel-->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 <!-- Custom Overriding CSS -->
 <link rel="stylesheet" href="css/style.css">
@@ -73,19 +74,19 @@
                 </li>    
                 <li class="dropdown"><a href="#"><span>Support</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a class="nav-link scrollto" href="#">Technical Support</a></li>
-                        <li><a class="nav-link scrollto" href="#">Sales Support</a></li>
-                        <li><a class="nav-link scrollto" href="#">FAQs</a></li>
+                        <li><a class="nav-link scrollto" href="Get-Quote.html">Technical Support</a></li>
+                        <li><a class="nav-link scrollto" href="Get-Quote.html">Sales Support</a></li>
+                        <li><a class="nav-link scrollto" href="./FAQ.html">FAQs</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#">Blogs</a></li>
                 <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a class="nav-link scrollto" href="#mendix">Careers</a></li>
-                        <li><a class="nav-link scrollto" href="#">Customers</a></li>
+                        <li><a class="nav-link scrollto" href="https://www.linkedin.com/company/labyrinth-global-solutions/posts/?feedView=all&viewAsMember=true" target="_blank">Career</a></li>
+                        <li><a class="nav-link scrollto" href="./customers.html">Customers</a></li>
                     </ul>
                 </li>
-                <li><a class="getstarted scrollto" href="#">Get Quote</a></li>
+                <li><a class="getstarted scrollto" href="./Get-Quote.html">Get Quote</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -102,42 +103,48 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
             <div class="item active">
-                <a href="#"><img src="./img/slider-1.png" alt="Los Angeles" style="width:100%; height:80vh;"></a>
+                <a href="polarion-alm.html"><img src="./img/slider-pol1.jpg" alt="Los Angeles" style="width:100%; height:80vh;"></a>
                 <div class="carousel-caption">
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                    <div style="text-align: center; padding-bottom: 50px;">
+                        <img src="./img/siemens-logo.png" alt="" class="img-fluid" style="width: 180px; height: 75px;">
+                        <h1>We offer modern solutions for growing your business</h1>
+                        <br><a href="Get-Quote.html" class="btn-get-started scrollto">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <a href="mendix.html"><img src="./img/slider-mendix.jpg" alt="Chicago" style="width:100%; height:80vh;"></a>
+                <div class="carousel-caption">
+                <div style="text-align: center; padding-bottom: 50px;">
+                    <img src="./img/Mendix-Logo.svg" alt="" class="img-fluid" style="width: 170px; height: 80px; margin-top: -12px; margin-bottom: -12px;">
+                    <h1>Build Great Apps, Fast</h1>
+                    <br><a href="Get-Quote.html" class="btn-get-started scrollto">Get Started</a>
                 </div>
                 </div>
             </div>
             <div class="item">
-                <a href="#"><img src="./img/slider-2.png" alt="Chicago" style="width:100%; height:80vh;"></a>
+                <a href="web-development.html"><img src="./img/web-mobile-dev.jpg" alt="New York" style="width:100%; height:80vh;"></a>
                 <div class="carousel-caption">
-                <div style="text-align: center;">
-                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                </div>
+                    <div style="text-align: center; padding-bottom: 50px;">
+                        <br><br><h1>Web & Mobile Application Development</h1>
+                        <img src="./img/Mendix-Logo.svg" alt="" class="img-fluid" style="width: 170px; height: 80px; margin-top: -12px; margin-bottom: -12px;">
+                        <br><a href="Get-Quote.html" class="btn-get-started scrollto">Get Started</a>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <a href="#"><img src="./img/slider-3.jpg" alt="New York" style="width:100%; height:80vh;"></a>
-                <div class="carousel-caption">
-                <div style="text-align: right;">
-                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                </div>
-                </div>
-            </div>
-            <div class="item">
+            <!--<div class="item">
                 <a href="#"><img src="./img/slider-4.jpg" alt="New York" style="width:100%; height:80vh;"></a>
                 <div class="carousel-caption">
                     <div style="text-align: left;">
-                        <a href="#about" class="btn-get-started scrollto" style="text-align: right;">Get Started</a>
+                        <a href="Get-Quote.html" class="btn-get-started scrollto" style="text-align: right;">Get Started</a>
                     </div>
                 </div>
-                </div>
+                </div>-->
             </div>
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -154,46 +161,41 @@
 <!-- End Home Section -->
 
 <main id="main">
-    <!-- Clients Section -->
-    <section id="cliens" class="cliens section-bg">
-        <div class="container">
-            <div class="row" data-aos="zoom-in" style="margin-top: 10px;">
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.mahindra.com/" target="_blank">
-                        <img src="./img/mahindra.png" class="img-fluid" alt="">
-                    </a>
+    <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients">
+
+            <div class="container" data-aos="fade-up">
+      
+              <header class="section-title">
+                <h2>Our Clients</h2>
+                
+              </header>
+      
+              <div class="clients-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide"><img src="img/customers/Tata Alexis.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/HCL.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Siemens.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Oracle.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Cognizant.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/SanDisk.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Medtronic.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Fidelity investments.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/ConvaTec.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Broadcom.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Zoox Motors.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Air BNB.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/ESPN Sports.png" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Record Linc.jpg" class="img-fluid" alt=""></div>
+                  <div class="swiper-slide"><img src="img/customers/Covidien.png" class="img-fluid" alt=""></div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.larsentoubro.com/" target="_blank">
-                        <img src="./img/lt.png" class="img-fluid" alt="" style="max-width: 95%;">
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.napino.com/" target="_blank">
-                        <img src="./img/napino.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.padminivna.com/" target="_blank">
-                        <img src="./img/pvna.png" class="img-fluid" alt="" style="max-width: 80%;">
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.shell.in/" target="_blank">
-                        <img src="./img/shell.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.cognizant.com/" target="_blank">
-                        <img src="./img/cog.png" class="img-fluid" alt="" style="max-width: 80%;">
-                    </a>
-                </div>
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
-        </div>
-    </section>
+          </section>
     <!-- End Clients Section -->
     <!-- About Us Section -->
-    <section id="about" class="about">
+    <section id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>About Us</h2>
@@ -207,7 +209,7 @@
                         together in Polarion ALM implementation, migration and integration with various tools, we have deployed proven
                         solution at various fortune 500 customers across globe.
                     </p>
-                    <a href="#" class="btn-learn-more">Learn More&nbsp;></a>
+                    <a href="polarion-alm.html" class="btn-learn-more">Learn More&nbsp;></a>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <h3 style="margin-left: 60px;">Industry Focus</h3>
@@ -334,7 +336,7 @@
                         <div class="icon">
                             <img src="./img/siemens.png" alt="" style="width: 150px; margin-bottom: 26px;">
                         </div>
-                        <h4><a href="">Polarion ALM</a></h4>
+                        <h4><a href="polarion-alm.html">Polarion ALM</a></h4>
                         <p>We are a proud partner of Siemens for implementing solutions on it’s cutting edge technology Polarion ALM. We provide a range of Polarion ALM services including:</p>
                         <ul>
                             <li>Integerion</li>
@@ -343,7 +345,7 @@
                             <li>Migration</li>
                             <li>Infrastructure Support</li>
                         </ul>
-                        <a href="#" class="btn-learn-more">More Details&nbsp;></a>
+                        <a href="polarion-alm.html" class="btn-learn-more">More Details&nbsp;></a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
@@ -351,9 +353,9 @@
                         <div class="icon">
                             <img src="./img/internet.png" alt="" style="width: 80px; height: 80px; margin-top: -35px;">
                         </div>
-                        <h4><a href="">SAAS & Cloud Solutions</a></h4>
+                        <h4><a href="saas-cloud.html">SAAS & Cloud Solutions</a></h4>
                         <p>You can host your Polarion on our cloud instance & avoid hasle of software maintenance. Instead of installing and maintaining software, you simply access it via the Internet, freeing yourself from complex software and hardware management.</p><br>
-                        <a href="#" class="btn-learn-more">More Details&nbsp;></a>
+                        <a href="saas-cloud.html" class="btn-learn-more">More Details&nbsp;></a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
@@ -361,7 +363,7 @@
                         <div class="icon">
                             <img src="./img/ptc.png" alt="" style="width: 150px; margin-left: -27px; margin-top: -70px; margin-bottom: -40px;">
                         </div>
-                        <h4><a href="">Integrity Lifecycle Manager</a></h4>
+                        <h4><a href="ptc-integrity.html">Integrity Lifecycle Manager</a></h4>
                         <p>We also do implementations on Windchill RV&S (Requirements Validation & Source) formly known as (PTC Integrity Lifecycle Manager). Some of the services we provide on this ALM tool are:</p>
                         <ul>
                             <li>Implementation</li>
@@ -370,7 +372,7 @@
                             <li>Migration</li>
                             <li>Infrastructure Support</li>
                         </ul>
-                        <a href="#" class="btn-learn-more">More Details&nbsp;></a>
+                        <a href="ptc-integrity.html" class="btn-learn-more">More Details&nbsp;></a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
@@ -378,9 +380,9 @@
                         <div class="icon">
                             <img src="./img/multiscreen.png" alt="" style="width: 75px; height: 75px; margin-top: -35px;">
                         </div>
-                        <h4><a href="">Web & Mobile App Development</a></h4>
+                        <h4><a href="web-development.html">Web & Mobile App Development</a></h4>
                         <p>We love working on complex web applications and delivering easy to use, beautiful products. And we also enjoy creating simple-to-use, and good-looking apps for iOS and Android devices.</p><br>
-                        <a href="#" class="btn-learn-more">More Details&nbsp;></a>
+                        <a href="web-development.html" class="btn-learn-more">More Details&nbsp;></a>
                     </div>
                 </div>
             </div> 
@@ -502,7 +504,7 @@
                     <a href="https://www.linkedin.com/company/labyrinth-global-solutions" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                     <a href="https://twitter.com/SolLabyrinth" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
                     <!--<a href="https://mail.google.com/" class="bi-envelope"><i class="bx bxl-mail"></i></a>-->
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="skype:ron7038804939?add" class="google-plus"><i class="bx bxl-skype"></i></a>
                 </div>
                 </div>
 
@@ -511,8 +513,8 @@
                 <ul>
                 <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#about">About Us</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Policies</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="./FAQ.html">FAQ</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="Privacy Policy.html">Policies</a></li>
                 </ul>
             </div>
     
@@ -556,6 +558,7 @@
 <!--For Carousel-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
 <!-- Custome Main JS File -->
 <script src="./js/main.js"></script>
