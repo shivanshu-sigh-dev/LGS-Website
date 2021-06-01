@@ -1,17 +1,21 @@
-const triggerUserEmailClient = event => {
+const triggerEmailClient = event => {
   event.preventDefault();
   // get the data entered by the user
+  const name = document.getElementById("name").value;
+  const from = document.getElementById("email").value;
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
 
-  // create the trigger link
-  const link = "mailto:info@labyrinthglobalsolutions.com?subject=" + subject + "&body=" + message;
-
-  // create an anchor element to trigger the client
-  const anchorElement = document.createElement("a");
-  anchorElement.setAttribute("href", link);
-  anchorElement.setAttribute("target", "_blank");
-  anchorElement.click();
+  $.ajax({
+    type: 'GET',
+    url: `http://localhost:8080/sendMail?name=${name}&from=${from}&sub=${subject}&msg=${message}`,
+    success: response => {
+      console.log(response);
+    },
+    error: error => {
+      console.log(error);
+    }
+  });
 };
 
 (function () {
@@ -147,17 +151,4 @@ const triggerUserEmailClient = event => {
       }
     }
   });
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false
-    });
-  });
-
 })();
