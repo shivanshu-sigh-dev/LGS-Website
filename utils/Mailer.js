@@ -5,7 +5,7 @@ class Mailer {
         this.name = userData.name;
         this.userSubject = userData.sub;
         this.from = userData.from;
-        this.message = userData.message;
+        this.message = userData.msg;
         this.isQuote = isQuote;
         this.phone = userData.phone;
         this.company = userData.company;
@@ -15,7 +15,7 @@ class Mailer {
             service: 'gmail',
             auth: {
                 user: 'infra@labyrinthglobalsolutions.com',
-                pass: ''
+                pass: '@Lgs1nfraTe@m'
             }
         });
     }

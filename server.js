@@ -1,8 +1,19 @@
 const express = require('express');
+const https = require('https');
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const Mailer = require('./utils/Mailer');
 
+var options = {
+    key: fs.readFileSync(__dirname + '/ssl/custom.key'),
+    cert: fs.readFileSync(__dirname + '/ssl/www_labyrinthglobalsolutions_com.crt'),
+};
+
 const app = express();
+
+const server = https.createServer(options, app).listen(443, () => {
+    console.log("Server is listening on port 443");
+});
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -113,7 +124,3 @@ app.post('/quote', (req, res) => {
         res.send("success");
     }
 });
-
-app.listen(8080, () => {
-    console.log("Server started on port 8080");
-})

@@ -46,11 +46,14 @@ const sendQuotation = event => {
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("Query").value;
   const website = document.getElementById("website").value;
+  
   const services = [];
 
-  $(".cbk:checked").each(() => {
-    services.push($(this).val());
-  });
+  const checkBoxes = document.querySelectorAll(".cbk:checked");
+  for (let index = 0; index < checkBoxes.length; index++) {
+    const element = checkBoxes[index];
+    services.push(element.value);
+  }
 
   $.ajax({
     type: 'POST',
@@ -214,52 +217,4 @@ const sendQuotation = event => {
     }
   });
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false
-    });
-  });
-
 })();
-
-/**
-   * Clients Slider
-   */
-  new Swiper('.clients-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
-      }
-    }
-  });
