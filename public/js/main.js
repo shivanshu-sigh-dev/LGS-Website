@@ -1,17 +1,39 @@
-const triggerUserEmailClient = event => {
+const triggerEmailClient = event => {
   event.preventDefault();
+
+  $(".loading").show();
+  $(".sent-message").hide();
   // get the data entered by the user
+  const name = document.getElementById("name").value;
+  const from = document.getElementById("email").value;
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
 
-  // create the trigger link
-  const link = "mailto:info@labyrinthglobalsolutions.com?subject=" + subject + "&body=" + message;
-
-  // create an anchor element to trigger the client
-  const anchorElement = document.createElement("a");
-  anchorElement.setAttribute("href", link);
-  anchorElement.setAttribute("target", "_blank");
-  anchorElement.click();
+  $.ajax({
+    type: 'POST',
+    url: '/sendMail',
+    contentType: 'application/json',
+    data: JSON.stringify({
+      "name": name,
+      "from": from,
+      "sub": subject,
+      "msg": message
+    }),
+    success: response => {
+      response = $.trim(response);
+      if(response === "success"){
+        $(".loading").hide();
+        $(".sent-message").show();
+      } else {
+        $(".loading").hide();
+        alert("Someting went wrong. Please try again later.");
+      }
+    },
+    error: error => {
+      $(".loading").hide();
+      alert("Someting went wrong. Please try again later.");
+    }
+  });
 };
 
 (function () {

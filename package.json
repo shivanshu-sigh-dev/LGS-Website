@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.1"
+  },
+  "name": "LGS-Website",
+  "description": "This is the codebase for the official website of [Labyrinth Global Solutions](http://www.labyrinthglobalsolutions.com/)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivanshu-sigh-dev/LGS-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivanshu-sigh-dev/LGS-Website/issues"
+  },
+  "homepage": "https://github.com/shivanshu-sigh-dev/LGS-Website#readme"
+}
