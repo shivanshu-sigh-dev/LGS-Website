@@ -316,7 +316,7 @@ input.error {
     border: 1px dashed red;
     font-weight: 300;
     color: red;
-	
+}
 	
 	</style>
 	
@@ -394,7 +394,7 @@ input.error {
 	<p style="text-align:center; font-weight:bold;color:red; "><u>All information submitted via this form will be kept confidential and will not use for any solicitation purpose.</u></p>
 	
 		<div class="container">
-		  <form id="basic-form" action="" method="post">
+		  <form id="basic-form" action="" method="post" onsubmit="sendQuotation(event);">
 			<div class="row">
 			  <div class="col-25">
 				<label for="fname">Full Name:</label>
@@ -464,21 +464,21 @@ input.error {
 				<label for="service">Service you required:</label>
 			  </div>
 			  <div class="col-75">
-				<input type="checkbox" id="service1" name="service1" value="service1">
+				<input type="checkbox" id="service1" name="service1" value="Website design and development" class="cbk">
 				<label for="service1"> Website design and development.</label><br>
-				<input type="checkbox" id="service2" name="service2" value="service2">
-				<label for="service2"> Polarion Training, Impementation, Roll Out, Integration, Industry specific Template.</label><br>
-				<input type="checkbox" id="service3" name="service3" value="service3">
+				<input type="checkbox" id="service2" name="service2" value="Polarion Impementation, Roll Out, Integration, Industry specific Template" class="cbk">
+				<label for="service2"> Polarion Impementation, Roll Out, Integration, Industry specific Template.</label><br>
+				<input type="checkbox" id="service3" name="service3" value="Polarion Training" class="cbk">
 				<label for="service3"> Polarion Training.</label><br>
-				<input type="checkbox" id="service4" name="service4" value="service4">
+				<input type="checkbox" id="service4" name="service4" value="Polarion License" class="cbk">
 				<label for="service4"> Polarion License.</label><br>
-				<input type="checkbox" id="service5" name="service5" value="service5">
+				<input type="checkbox" id="service5" name="service5" value="Mendix Implementation, Roll Out, Integration" class="cbk">
 				<label for="service5"> Mendix Implementation, Roll Out, Integration.</label><br>
-				<input type="checkbox" id="service6" name="service6" value="service6">
+				<input type="checkbox" id="service6" name="service6" value="Mendix Training" class="cbk">
 				<label for="service6"> Mendix Training.</label><br>
-				<input type="checkbox" id="service7" name="service7" value="service7">
+				<input type="checkbox" id="service7" name="service7" value="Mendix License" class="cbk">
 				<label for="service7"> Mendix License.</label><br>
-				<input type="checkbox" id="service8" name="service8" value="service8">
+				<input type="checkbox" id="service8" name="service8" value="PTC Implementation , Roll Out, Integration" class="cbk">
 				<label for="service8"> PTC Implementation , Roll Out, Integration.</label><br>
 			  </div>
 			</div>

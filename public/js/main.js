@@ -36,6 +36,50 @@ const triggerEmailClient = event => {
   });
 };
 
+const sendQuotation = event => {
+  event.preventDefault();
+
+  const name = document.getElementById("fname").value;
+  const from = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const company = document.getElementById("company").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("Query").value;
+  const website = document.getElementById("website").value;
+  const services = [];
+
+  $(".cbk:checked").each(() => {
+    services.push($(this).val());
+  });
+
+  $.ajax({
+    type: 'POST',
+    url: '/quote',
+    contentType: 'application/json',
+    data: JSON.stringify({
+      "name": name,
+      "from": from,
+      "sub": subject,
+      "msg": message,
+      "phone": phone,
+      "company": company,
+      "website": website,
+      "services": services.toString()
+    }),
+    success: response => {
+      response = $.trim(response);
+      if(response === "success"){
+        alert("We received your request. Someone from our team will reach out to you shortly.");
+      } else {
+        alert("Someting went wrong. Please try again later.");
+      }
+    },
+    error: error => {
+      alert("Someting went wrong. Please try again later.");
+    }
+  });
+};
+
 (function () {
   "use strict";
 

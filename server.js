@@ -11,8 +11,21 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
+app.get('/quote', (req, res) => {
+    res.sendFile(__dirname + "/Get-Quote.html");
+});
+
 app.post('/sendMail', (req, res) => {
-    const newEmail = new Mailer(req.body.name, req.body.sub, req.body.from, req.body.msg);
+    const newEmail = new Mailer(req.body, false);
+    if(newEmail.triggerMail()){
+        res.send("failed");
+    } else {
+        res.send("success");
+    }
+});
+
+app.post('/quote', (req, res) => {
+    const newEmail = new Mailer(req.body, true);
     if(newEmail.triggerMail()){
         res.send("failed");
     } else {
