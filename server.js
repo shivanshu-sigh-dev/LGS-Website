@@ -3,8 +3,9 @@ const https = require('https');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const Mailer = require('./utils/Mailer');
+const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
 
-var options = {
+const options = {
     key: fs.readFileSync(__dirname + '/ssl/custom.key'),
     cert: fs.readFileSync(__dirname + '/ssl/www_labyrinthglobalsolutions_com.crt'),
 };
@@ -17,6 +18,7 @@ const server = https.createServer(options, app).listen(443, () => {
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html");
@@ -124,3 +126,7 @@ app.post('/quote', (req, res) => {
         res.send("success");
     }
 });
+
+/*app.listen(80, () => {
+	console.log("Server started on port 80");
+});*/
