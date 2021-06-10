@@ -5,16 +5,16 @@ const bodyParser = require('body-parser');
 const Mailer = require('./utils/Mailer');
 const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
 
-/**const options = {
+const options = {
     key: fs.readFileSync(__dirname + '/ssl/custom.key'),
     cert: fs.readFileSync(__dirname + '/ssl/www_labyrinthglobalsolutions_com.crt'),
-};**/
+};
 
 const app = express();
 
-/**const server = https.createServer(options, app).listen(443, () => {
+const server = https.createServer(options, app).listen(443, () => {
     console.log("Server is listening on port 443");
-});**/
+});
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -127,6 +127,6 @@ app.post('/quote', (req, res) => {
     }
 });
 
-app.listen(8080, () => {
-	console.log("Server started on port 8080");
-});
+// app.listen(8080, () => {
+// 	console.log("Server started on port 8080");
+// });
