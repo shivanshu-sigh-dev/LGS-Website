@@ -109,6 +109,10 @@ app.get('/privacy', (req, res) => {
     res.sendFile(__dirname + "/Privacy.html");
 });
 
+app.get('/thanks', (req, res) => {
+    res.sendFile(__dirname + "/thanks.html");
+});
+
 app.post('/sendMail', (req, res) => {
     const newEmail = new Mailer(req.body, false);
     if(newEmail.triggerMail()){
@@ -119,14 +123,18 @@ app.post('/sendMail', (req, res) => {
 });
 
 app.post('/quote', (req, res) => {
-    const newEmail = new Mailer(req.body, true);
-    if(newEmail.triggerMail()){
-        res.send("failed");
+    if(req.body.name === '' || req.body.from === '' || req.body.sub === '' || req.body.msg === '' || req.body.company === ''){
+        res.send("invalid");
     } else {
-        res.send("success");
+        const newEmail = new Mailer(req.body, true);
+        if(newEmail.triggerMail()){
+            res.send("failed");
+        } else {
+            res.send("success");
+        }
     }
 });
 
-// app.listen(8080, () => {
-// 	console.log("Server started on port 8080");
-// });
+//  app.listen(8080, () => {
+//  	console.log("Server started on port 8080");
+//  });

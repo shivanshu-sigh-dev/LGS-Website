@@ -47,6 +47,15 @@
 		callback }); return false; } 
 	</script>
 
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TLTJBW2');
+	</script>
+	<!-- End Google Tag Manager -->
+	
 <style>	
 	/* ...Main menu bar... */
 
@@ -327,19 +336,21 @@ input.error {
     font-weight: 300;
     color: red;
 }
-	
-	</style>
-	
+</style>
 	<script>
 		$(document).ready(function() {
 			$("#basic-form").validate();
 		});
 	</script>
-	
-	
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLTJBW2"
+		height="0" width="0" style="display:none;visibility:hidden">
+	</iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	
 <!-- Header of the website which contains the logo and navigation -->
 <header id="header" class="fixed-top" style="background: #FFFFFF; margin-top: -20px;">
     <div class="container d-flex align-items-center">
@@ -403,13 +414,14 @@ input.error {
 	<p style="text-align:center; font-weight:bold;color:red; "><u>All information submitted via this form will be kept confidential and will not use for any solicitation purpose.</u></p>
 	
 		<div class="container">
-		  <form id="basic-form" action="" method="post" onsubmit="sendQuotation(event);">
+		  <form id="basic-form" action="" method="" onsubmit="sendQuotation(event);">
 			<div class="row">
 			  <div class="col-25">
-				<label for="fname">Full Name:</label>
+				<label for="fname">Full Name:<span>(required)</span></label>
+				<span style="color:red;">*</span>
 			  </div>
 			  <div class="col-75">
-				<input type="text" id="fname" name="firstname" placeholder="Full name..">
+				<input type="text" id="fname" name="firstname" placeholder="Full name.." required>
 			  </div>
 			</div>
 			<div class="row">
@@ -444,15 +456,16 @@ input.error {
 				<span style="color:red;">*</span>
 			  </div>
 			  <div class="col-75">
-				<textarea id="subject" name="subject" placeholder="Write something" style="height:100px" minlength="3" required></textarea>
+				<input type="text" id="subject" name="subject" placeholder="Subject" required></textarea>
 			  </div>
 			</div>
 			<div class="row">
 			  <div class="col-25">
-				<label for="query">Query:</label>
+				<label for="query">Query:<span>(required)</span></label>
+				<span style="color:red;">*</span>
 			  </div>
 			  <div class="col-75">
-				<textarea id="Query" name="Query" placeholder="Write something.." ></textarea>
+				<textarea id="Query" name="Query" placeholder="Your Query" style="height:100px" minlength="10" required></textarea>
 			  </div>
 			</div>
 			

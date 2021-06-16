@@ -72,7 +72,9 @@ const sendQuotation = event => {
     success: response => {
       response = $.trim(response);
       if(response === "success"){
-        alert("We received your request. Someone from our team will reach out to you shortly.");
+        window.location.href = "/thanks";
+      } else if(response === "invalid"){
+        alert("Please fill all of the required fields.");
       } else {
         alert("Someting went wrong. Please try again later.");
       }
