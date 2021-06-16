@@ -109,6 +109,10 @@ app.get('/privacy', (req, res) => {
     res.sendFile(__dirname + "/Privacy.html");
 });
 
+app.get('/thanks', (req, res) => {
+    res.sendFile(__dirname + "/thanks.html");
+});
+
 app.post('/sendMail', (req, res) => {
     const newEmail = new Mailer(req.body, false);
     if(newEmail.triggerMail()){
@@ -127,6 +131,6 @@ app.post('/quote', (req, res) => {
     }
 });
 
-// app.listen(8080, () => {
-// 	console.log("Server started on port 8080");
-// });
+ //app.listen(8080, () => {
+ //	console.log("Server started on port 8080");
+ //});
