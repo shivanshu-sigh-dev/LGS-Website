@@ -15,7 +15,7 @@ class Mailer {
             service: 'gmail',
             auth: {
                 user: 'infra@labyrinthglobalsolutions.com',
-                pass: '@Lgs1nfraTe@m'
+                pass: ''
             }
         });
     }
